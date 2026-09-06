@@ -1,0 +1,29 @@
+{
+  "name": "@checkoutmain/camera-barcode-scanner",
+  "version": "0.1.0",
+  "description": "Phone-camera barcode scanner for React: ZXing WASM decoding in a Web Worker, two-tier frame strategy, two-decode confirmation, iOS Safari memory handling.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./src/CameraScanner.css"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "barcode",
+    "scanner",
+    "camera",
+    "react",
+    "zxing",
+    "upc",
+    "ean",
+    "pos"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "zxing-wasm": "^3.1.0"
+  }
+}

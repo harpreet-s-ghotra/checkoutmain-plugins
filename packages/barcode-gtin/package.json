@@ -1,0 +1,24 @@
+{
+  "name": "@checkoutmain/barcode-gtin",
+  "version": "0.1.0",
+  "description": "GTIN equivalence for retail barcodes: UPC-E expand/compress with check-digit proof, and every stored form a scanned code could match.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "barcode",
+    "gtin",
+    "upc",
+    "upc-e",
+    "ean",
+    "ean-13",
+    "retail",
+    "pos"
+  ]
+}

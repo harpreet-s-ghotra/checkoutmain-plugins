@@ -1,0 +1,30 @@
+{
+  "name": "@checkoutmain/keyboard-wedge-scanner",
+  "version": "0.1.0",
+  "description": "Capture USB / Bluetooth barcode scanners that type like a keyboard: a pure, testable keystroke parser plus a React hook and component.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "barcode",
+    "scanner",
+    "keyboard-wedge",
+    "hid",
+    "react",
+    "pos"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}

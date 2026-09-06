@@ -1,0 +1,27 @@
+{
+  "name": "checkoutmain-plugins",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reusable, documented building blocks extracted from the CheckoutMain / High Spirits POS — starting with barcode scanning.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run typecheck && npm run test"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "prettier": "^3.9.4",
+    "react": "^19.0.0",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.10",
+    "zxing-wasm": "^3.1.0"
+  }
+}

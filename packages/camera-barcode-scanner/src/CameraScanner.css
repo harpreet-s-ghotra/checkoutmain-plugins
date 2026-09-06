@@ -1,0 +1,97 @@
+/*
+ * Camera scanner — full-screen overlay. Every colour and radius is a custom
+ * property with a fallback, so the component drops into any design system:
+ * set the --cam-scan-* variables on an ancestor (or :root) to restyle it.
+ */
+.cam-scan {
+  position: fixed;
+  inset: 0;
+  z-index: var(--cam-scan-z, 60);
+  display: flex;
+  flex-direction: column;
+  background: var(--cam-scan-bg, #0b0f0d);
+  color: var(--cam-scan-text, #e8efe9);
+  font-family: var(--cam-scan-font, system-ui, sans-serif);
+}
+
+.cam-scan__bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--cam-scan-border, #22302a);
+  background: var(--cam-scan-panel, #111815);
+}
+
+.cam-scan__title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cam-scan__close {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--cam-scan-border, #22302a);
+  border-radius: var(--cam-scan-radius, 3px);
+  background: transparent;
+  color: var(--cam-scan-text, #e8efe9);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cam-scan__stage {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.cam-scan__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cut-out reticle: the big spread shadow dims everything outside the frame.
+ * Its height (34%) matches the BAND constant in CameraScanner.tsx — the fast
+ * decode pass reads exactly the strip the user is told to aim at. */
+.cam-scan__reticle {
+  position: absolute;
+  width: min(70vw, 320px);
+  height: 34%;
+  border: 2px solid rgb(255 255 255 / 70%);
+  border-radius: var(--cam-scan-radius, 3px);
+  box-shadow: 0 0 0 100vmax rgb(0 0 0 / 35%);
+}
+
+.cam-scan__hint {
+  position: absolute;
+  bottom: 14px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 55%);
+  font-size: 12px;
+}
+
+.cam-scan__stage--recognized {
+  box-shadow: inset 0 0 0 4px var(--cam-scan-ok, #35c46b);
+}
+
+.cam-scan__stage--unrecognized {
+  box-shadow: inset 0 0 0 4px var(--cam-scan-fail, #ff6a5e);
+}
+
+.cam-scan__error {
+  padding: 24px;
+  color: var(--cam-scan-muted, #8aa093);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
