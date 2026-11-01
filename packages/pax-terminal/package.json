@@ -1,0 +1,29 @@
+{
+  "name": "@checkoutmain/pax-terminal",
+  "version": "0.1.0",
+  "description": "Drive a PAX semi-integrated card terminal (POSLink over TCP, Fiserv RapidConnect) from Node: sale, return, void, standalone credit, one-command-at-a-time lock, and recovery of a sale the terminal accepted but never answered.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "pax",
+    "poslink",
+    "rapidconnect",
+    "fiserv",
+    "first-data",
+    "card-terminal",
+    "semi-integrated",
+    "payments",
+    "pos",
+    "electron"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

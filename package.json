@@ -2,7 +2,7 @@
   "name": "checkoutmain-plugins",
   "version": "0.1.0",
   "private": true,
-  "description": "Reusable, documented building blocks extracted from the CheckoutMain / High Spirits POS — starting with barcode scanning.",
+  "description": "Reusable, documented building blocks extracted from the CheckoutMain / High Spirits POS: barcode scanning and PAX card terminals.",
   "license": "MIT",
   "type": "module",
   "workspaces": [
@@ -17,6 +17,7 @@
     "check": "npm run format:check && npm run typecheck && npm run test"
   },
   "devDependencies": {
+    "@types/node": "^22.20.5",
     "@types/react": "^19.0.0",
     "prettier": "^3.9.4",
     "react": "^19.0.0",
