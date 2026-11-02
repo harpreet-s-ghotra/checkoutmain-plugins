@@ -1,0 +1,73 @@
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--r-full);
+  padding: 4px 11px;
+  letter-spacing: 0.02em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ui-badge--upper {
+  text-transform: uppercase;
+}
+
+.ui-badge--success {
+  background: var(--tag-4-bg);
+  color: var(--tag-4-fg);
+}
+
+.ui-badge--warning {
+  background: var(--accent-container);
+  color: var(--on-accent-container);
+}
+
+.ui-badge--danger {
+  background: var(--danger-container);
+  color: var(--on-danger-container);
+}
+
+.ui-badge--info {
+  background: var(--tag-3-bg);
+  color: var(--tag-3-fg);
+}
+
+.ui-badge--neutral {
+  background: var(--surface-high);
+  color: var(--on-surface-variant);
+}
+
+/* Category tag tints */
+.ui-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--r);
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ui-tag--1 {
+  background: var(--tag-1-bg);
+  color: var(--tag-1-fg);
+}
+.ui-tag--2 {
+  background: var(--tag-2-bg);
+  color: var(--tag-2-fg);
+}
+.ui-tag--3 {
+  background: var(--tag-3-bg);
+  color: var(--tag-3-fg);
+}
+.ui-tag--4 {
+  background: var(--tag-4-bg);
+  color: var(--tag-4-fg);
+}
+.ui-tag--5 {
+  background: var(--tag-5-bg);
+  color: var(--tag-5-fg);
+}
+.ui-tag--6 {
+  background: var(--tag-6-bg);
+  color: var(--tag-6-fg);
+}

@@ -1,0 +1,31 @@
+.ui-checkbox {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ui-checkbox--boxed {
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--r);
+  padding: 12px 14px;
+}
+
+.ui-checkbox input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary);
+}
+
+.ui-checkbox__label {
+  display: block;
+  color: var(--on-surface);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ui-checkbox__desc {
+  display: block;
+  color: var(--on-surface-variant);
+  font-size: 12px;
+}

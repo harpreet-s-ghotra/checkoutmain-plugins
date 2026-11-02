@@ -1,0 +1,94 @@
+.ui-btn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r);
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.ui-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.ui-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.ui-btn--block {
+  width: 100%;
+}
+
+/* sizes — all meet the 48px touch floor except sm, reserved for dense rows */
+.ui-btn--sm {
+  padding: 0 14px;
+  min-height: 40px;
+  font-size: 14px;
+}
+
+.ui-btn--md {
+  padding: 0 20px;
+  min-height: var(--touch-min);
+  font-size: 15px;
+}
+
+.ui-btn--lg {
+  padding: 0 26px;
+  min-height: 56px;
+  font-size: 16px;
+}
+
+/* variants */
+.ui-btn--primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.ui-btn--primary:hover:not(:disabled) {
+  background: var(--primary-container);
+}
+
+.ui-btn--success {
+  background: var(--success);
+  color: var(--on-success);
+}
+
+.ui-btn--success:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.ui-btn--secondary {
+  border: 1px solid var(--outline);
+  background: var(--surface-lowest);
+  color: var(--primary);
+}
+
+.ui-btn--secondary:hover:not(:disabled) {
+  background: var(--surface);
+}
+
+.ui-btn--danger {
+  background: var(--danger);
+  color: var(--on-danger);
+}
+
+.ui-btn--neutral {
+  background: var(--surface-high);
+  color: var(--primary);
+}
+
+.ui-btn--neutral:hover:not(:disabled) {
+  filter: brightness(0.97);
+}
+
+.ui-btn--ghost {
+  background: transparent;
+  color: var(--on-surface-variant);
+}
+
+.ui-btn--ghost:hover:not(:disabled) {
+  background: var(--surface);
+  color: var(--on-surface);
+}

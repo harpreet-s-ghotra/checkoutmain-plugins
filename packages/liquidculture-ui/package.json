@@ -1,0 +1,33 @@
+{
+  "name": "@checkoutmain/liquidculture-ui",
+  "version": "0.1.0",
+  "description": "Retail Precision: the LiquidCulture POS component library and design tokens for React. Button, Field/Input/Select, PriceInput, SearchInput, Segmented, Tabs, Checkbox, Badge/Tag, IconTile, Modal — plain CSS with BEM, no Tailwind, built for touch registers.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./src/tokens.css",
+    "./base.css": "./src/base.css"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "design-system",
+    "component-library",
+    "pos",
+    "point-of-sale",
+    "touch",
+    "css",
+    "bem",
+    "design-tokens"
+  ],
+  "peerDependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": ">=0.400.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}

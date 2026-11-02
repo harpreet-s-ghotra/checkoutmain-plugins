@@ -1,0 +1,24 @@
+.ui-segmented {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 4px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--r);
+  background: var(--surface-low);
+  padding: 4px;
+  height: 46px;
+}
+
+.ui-segmented__opt {
+  border-radius: var(--r-sm);
+  color: var(--on-surface-variant);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-segmented__opt--on {
+  box-shadow: 0 1px 2px rgb(3 22 54 / 14%);
+  background: var(--surface-lowest);
+  color: var(--primary);
+}

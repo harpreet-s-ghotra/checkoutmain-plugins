@@ -1,0 +1,81 @@
+/*
+ * Retail Precision — design tokens.
+ * Single source of truth for color, radius, and spacing.
+ * See docs/design.md. Never hardcode a hex value in a component.
+ */
+
+:root {
+  /* ── Surfaces (tonal depth, light → bright) ── */
+  --bg: #f8f9fa;
+  --surface-bright: #f8f9fa;
+  --surface-lowest: #ffffff;
+  --surface-low: #f3f4f5;
+  --surface: #edeeef;
+  --surface-high: #e7e8e9;
+  --surface-highest: #e1e3e4;
+  --surface-dim: #d9dadb;
+
+  /* ── Text ── */
+  --on-surface: #191c1d;
+  --on-surface-variant: #44474e;
+
+  /* ── Lines ── */
+  --outline: #75777f;
+  --outline-variant: #c5c6cf;
+
+  /* ── Primary (navy) — frame, nav, admin actions ── */
+  --primary: #031636;
+  --on-primary: #ffffff;
+  --primary-container: #1a2b4c;
+  --on-primary-container: #8293ba;
+
+  /* ── Success (green) — high-intent transactional actions ── */
+  --success: #1b6d24;
+  --on-success: #ffffff;
+  --success-container: #a0f399;
+  --on-success-container: #217128;
+
+  /* ── Accent (amber) — alerts, pending, weighed-item flags ── */
+  --accent: #b26a00;
+  --accent-container: #ffddba;
+  --on-accent-container: #663d00;
+
+  /* ── Danger (red) — void, delete, cancel ── */
+  --danger: #ba1a1a;
+  --on-danger: #ffffff;
+  --danger-container: #ffdad6;
+  --on-danger-container: #93000a;
+
+  /* ── Category tag palette (soft bg + readable fg) — badges & chips ── */
+  --tag-1-bg: #e8eafc;
+  --tag-1-fg: #3b43a8;
+  --tag-2-bg: #fdeccd;
+  --tag-2-fg: #8a5300;
+  --tag-3-bg: #e2eefb;
+  --tag-3-fg: #1f5aa8;
+  --tag-4-bg: #dcf3da;
+  --tag-4-fg: #1f7a2e;
+  --tag-5-bg: #f0e6fb;
+  --tag-5-fg: #6b3fa0;
+  --tag-6-bg: #d9f0f0;
+  --tag-6-fg: #16706e;
+
+  /* ── Receipt paper (the catch-up slip) ── */
+  --receipt-paper: #fffef8;
+  --receipt-edge: #e4dfcf;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', consolas, monospace;
+  /* ── Radius (Soft) ── */
+  --r-sm: 2px;
+  --r: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  --r-xl: 12px;
+  --r-2xl: 20px;
+  --r-full: 9999px;
+
+  /* ── Spacing ── */
+  --touch-min: 48px;
+  --gap-cart: 4px;
+  --gap-tile: 12px;
+  --pad-container: 24px;
+}

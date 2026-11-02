@@ -1,0 +1,26 @@
+.ui-icontile {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: var(--r-lg);
+}
+
+.ui-icontile--sm {
+  width: 34px;
+  height: 34px;
+}
+
+.ui-icontile--md {
+  width: 40px;
+  height: 40px;
+}
+
+.ui-icontile--primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.ui-icontile--subtle {
+  background: var(--surface-low);
+  color: var(--primary);
+}
