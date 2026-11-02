@@ -2,7 +2,7 @@
   "name": "checkoutmain-plugins",
   "version": "0.1.0",
   "private": true,
-  "description": "Reusable, documented building blocks extracted from the CheckoutMain / High Spirits POS: barcode scanning and PAX card terminals.",
+  "description": "Reusable, documented building blocks extracted from the CheckoutMain POS products: barcode scanning, PAX card terminals, receipt and label printing, and the Retail Precision UI kit.",
   "license": "MIT",
   "type": "module",
   "workspaces": [
@@ -17,10 +17,24 @@
     "check": "npm run format:check && npm run typecheck && npm run test"
   },
   "devDependencies": {
+    "@napi-rs/canvas": "^1.1.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^22.20.5",
+    "@types/pdfkit": "^0.17.7",
     "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.3.0",
+    "bwip-js": "^4.11.4",
+    "clsx": "^2.1.1",
+    "jsdom": "^28.1.0",
+    "lucide-react": "^0.577.0",
+    "pdf-to-printer": "^5.8.1",
+    "pdfjs-dist": "^6.5.438",
+    "pdfkit": "^0.18.0",
     "prettier": "^3.9.4",
     "react": "^19.0.0",
+    "react-dom": "^19.3.1",
     "typescript": "^5.8.3",
     "vitest": "^4.1.10",
     "zxing-wasm": "^3.1.0"

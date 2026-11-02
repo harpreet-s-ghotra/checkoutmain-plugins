@@ -10,16 +10,20 @@ MIT licensed. Use them, fork them, ship them.
 
 ## Packages
 
-| Package                                                     | What it does                                                                                                                                                                                                       |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`camera-barcode-scanner`](packages/camera-barcode-scanner) | Phone-camera barcode scanner for React. ZXing WASM decoding in a Web Worker, a two-tier frame strategy, two-decode confirmation, and the iOS Safari memory handling that took weeks to learn.                      |
-| [`keyboard-wedge-scanner`](packages/keyboard-wedge-scanner) | Capture USB / Bluetooth scanners that type like a keyboard. A pure, unit-tested keystroke parser plus a React hook and component.                                                                                  |
-| [`barcode-gtin`](packages/barcode-gtin)                     | GTIN equivalence: UPC-E ↔ UPC-A with check-digit proof, a canonical form, and every stored string a scanned code could match.                                                                                      |
-| [`pax-terminal`](packages/pax-terminal)                     | Drive a PAX card terminal (POSLink over TCP, Fiserv RapidConnect) from Node: sale, return, void, standalone credit, a one-command-at-a-time lock, and recovery of a sale the terminal accepted but never answered. |
+| Package                                                     | What it does                                                                                                                                                                                                                                                            |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`camera-barcode-scanner`](packages/camera-barcode-scanner) | Phone-camera barcode scanner for React. ZXing WASM decoding in a Web Worker, a two-tier frame strategy, two-decode confirmation, and the iOS Safari memory handling that took weeks to learn.                                                                           |
+| [`keyboard-wedge-scanner`](packages/keyboard-wedge-scanner) | Capture USB / Bluetooth scanners that type like a keyboard. A pure, unit-tested keystroke parser plus a React hook and component.                                                                                                                                       |
+| [`barcode-gtin`](packages/barcode-gtin)                     | GTIN equivalence: UPC-E ↔ UPC-A with check-digit proof, a canonical form, and every stored string a scanned code could match.                                                                                                                                           |
+| [`pax-terminal`](packages/pax-terminal)                     | Drive a PAX card terminal (POSLink over TCP, Fiserv RapidConnect) from Node: sale, return, void, standalone credit, a one-command-at-a-time lock, and recovery of a sale the terminal accepted but never answered.                                                      |
+| [`receipt-printer`](packages/receipt-printer)               | Thermal receipts, the cash drawer and shelf labels from Node/Electron on every OS: a receipt PDF through the driver for Star and most printers, drawn to ESC/POS raster for Epson TM (upright and cut), a warm Windows raw-print host, drawer kicks, ZPL or PDF labels. |
+| [`liquidculture-ui`](packages/liquidculture-ui)             | Retail Precision: the LiquidCulture POS component library and design tokens for React. Button, Field/Input/Select, PriceInput, SearchInput, Segmented, Tabs, Checkbox, Badge/Tag, IconTile, Modal. Plain CSS + BEM, built for touch.                                    |
 
 The three barcode packages compose: the camera scanner and the wedge hook both
 hand you a code string; `barcode-gtin` turns that string into the lookup you
-actually need. `pax-terminal` stands alone on the payment side.
+actually need. `pax-terminal` stands alone on the payment side, and
+`receipt-printer` on the paper side; `liquidculture-ui` is the screen the
+others get wired into.
 
 ```tsx
 import { CameraScanner } from '@checkoutmain/camera-barcode-scanner'
@@ -67,8 +71,11 @@ Three ways to bring a package in:
 3. **npm workspaces / git submodule** if you already run a monorepo.
 
 Peer dependencies: `react >= 18` for the React pieces, `zxing-wasm ^3` for the
-camera scanner. `barcode-gtin` has none. `pax-terminal` needs Node ≥ 18 (it
-opens TCP sockets) and nothing else.
+camera scanner, `lucide-react` + `clsx` for the UI kit. `barcode-gtin` has none.
+`pax-terminal` needs Node ≥ 18 (it opens TCP sockets) and nothing else.
+`receipt-printer` lists its printer-side peers (pdfjs, a canvas, pdfkit,
+bwip-js, pdf-to-printer) in its README; each loads only when that printer is
+in the store.
 
 ## Development
 

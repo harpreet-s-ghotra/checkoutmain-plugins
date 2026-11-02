@@ -1,0 +1,53 @@
+{
+  "name": "@checkoutmain/receipt-printer",
+  "version": "0.1.0",
+  "description": "Thermal receipt, cash drawer and shelf-label printing from Node/Electron on macOS, Windows and Linux: a receipt PDF sent through the driver for Star and most printers, drawn to ESC/POS raster and sent raw for Epson TM (upright and cut on every OS), a warm Windows raw-print host, drawer kicks, and ZPL or PDF labels.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "receipt",
+    "printer",
+    "escpos",
+    "esc/pos",
+    "epson",
+    "tm-t20",
+    "star",
+    "tsp",
+    "zebra",
+    "zpl",
+    "label",
+    "cash-drawer",
+    "winspool",
+    "cups",
+    "pos",
+    "electron"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@napi-rs/canvas": "^1.0.0",
+    "bwip-js": "^4.0.0",
+    "pdf-to-printer": "^5.0.0",
+    "pdfjs-dist": "^6.0.0",
+    "pdfkit": ">=0.15.0"
+  },
+  "peerDependenciesMeta": {
+    "@napi-rs/canvas": {
+      "optional": true
+    },
+    "pdf-to-printer": {
+      "optional": true
+    },
+    "pdfjs-dist": {
+      "optional": true
+    }
+  }
+}
